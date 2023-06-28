@@ -1,0 +1,130 @@
+def easy():
+    import random
+    y=random.randint(1,10)
+    print(y)
+    print("Click 5 IF you want hint or 1 if not needed")
+    z=int(input("Enter the 5 if you want hint or 1 if no hint is needed:"))
+    def guess():
+        print("Rules:")
+        print("1.You have to choose between 1 to 10 only")
+        print("2.If you choose above 10 the game will be stopped")
+        print("3.You will be given only 3 chances in this mode of game")
+        s=0
+        for i in range(3):
+            s=s+1
+            r=int(input("What is your guess number:"))
+            if(y==r):
+                print("The guess is correct")
+                return
+        print("You haven't choosed the correct guess.")
+        o=3-s
+        print(f"The score of the Player is {o}")
+        if(y!=r):
+            return
+        else:
+            print("The guess is correct")
+            return
+    def hint():
+        print("Hint 1:")
+        if(y%2==0):
+            print("It will be an even number")
+            guess()
+            return
+        else:
+            print("It will be an odd number")
+            guess()
+    if(z==5):
+        hint()
+    else:
+        guess()
+        return
+def medium():
+    print("Rules:")
+    print("1.You have to choose between 1 to 100 only")
+    print("2.If you choose above 100 the game will be stopped")
+    print("3.You will be given only 5 chances in this mode of game")
+    import random
+    y=random.randint(1,100)
+    print(y)
+    print("Click 5 IF you want hint or 1 if not needed")
+    z=int(input("Enter the 5 if you want hint or 1 if no hint is needed:"))
+    def guess():
+        s=0
+        for i in range(5):
+            s=s+1
+            r=int(input("What is your guess number:"))
+            if(y==r):
+                print("The guess is correct")
+                return
+        print("You haven't choosed the correct guess.")
+        o=5-s
+        print(f"The score of the Player is {o}")
+        if(y!=r):
+            return
+        else:
+            print("The guess is correct")
+            return
+    def hint():
+        print("Hint 1:")
+        if(y%2==0):
+            print("It will be an even number")
+            guess()
+            return
+        else:
+            print("It will be an odd number")
+            guess()
+    if(z==5):
+        hint()
+    else:
+        guess()
+        return
+def hard():
+    print("Rules:")
+    print("1.You have to choose between 1 to 1000 only")
+    print("2.If you choose above 100 the game will be stopped")
+    print("3.You will be given only 10 chances in this mode of game")
+    import random
+    y=random.randint(1,1000)
+    print("Click 5 IF you want hint or 1 if not needed")
+    z=int(input("Enter the 5 if you want hint or 1 if no hint is needed:"))
+    def guess():
+        s=0
+        for i in range(10):
+            s=s+1
+            r=int(input("What is your guess number:"))
+            if(y==r):
+                print("The guess is correct")
+                return
+        print("You haven't choosed the correct guess.")
+        o=10-s
+        print(f"The score of the Player is {o}")
+        if(y!=r):
+            return
+        else:
+            print("The guess is correct")
+            return
+    def hint():
+        print("Hint 1:")
+        if(y%2==0):
+            print("It will be an even number")
+            guess()
+            return
+        else:
+            print("It will be an odd number")
+            guess()
+    if(z==5):
+        hint()
+    else:
+        guess()
+        return
+    print(y)
+print("The Type of Level You want:")
+print("1.Easy(1-10)\n2.Medium(1-100)\n3.Hard(1-1000)")
+x=int(input("Enter the level of game you want:"))
+if(x==1):
+    easy()
+elif(x==2):
+    medium()
+else:
+    hard()
+print("Thank you for playing with me")
